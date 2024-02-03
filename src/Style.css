@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --ff-background-color: hsl(224, 31%, 12%);
+}
+
+
+body {
+    background-color: var(--ff-background-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+h2{
+    font-size: 1.5rem
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+
+.cardholder {
+    background-color:hsl(236, 38%, 22%);
+    border-radius: 1rem;
+}
+
+.cardholder:hover{
+    background-color: hsl(236, 38%, 35%);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 65.625rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+
+.card-background {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    min-height: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+    border-top-left-radius: 1rem; /* Adjust the radius for the top-left corner */
+    border-top-right-radius: 1rem; 
+}
+
+.background-image{
+    z-index: 1;
+    max-width: 100%; 
+    max-height: 3rem;
+}
+
+.card-background>p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.profile-background{
+    display: flex;
+    align-items: center;
+    max-height: 1.5rem;
+    background-color: hsl(246, 79%, 60%);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.profile-picture{
+    max-width: 5rem;
+    height: max-content;
+    margin-inline: 1rem;
+    width: 100%;
+    border: 0.1rem solid white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-card-info{
+    padding-inline: 2rem;
+}
+
+.profile-card-info p:hover {
+    font-weight: bold;
+  }
+
+.profile-card-title > h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.profile-card-title > p {
+    margin-bottom: 0;
+}
+
+.card-info {
+    z-index: 2;
+    padding-inline: 1.5rem;
+}
+
+
+.card-info >h2 {
+    margin-block: 1rem;
+    font-size: 3rem;
+}
+
+
+.card-info:nth-child(1){
+    padding: 0;
+}
+
+.card-info-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title{
+font-weight: 900;
+}
+
+.ellipsis {
+    max-width: 1.5rem;
+    min-height: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.card-info-title:hover .ellipsis {
+    opacity: 0.2;
+  }
+
+.hours-spent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+
+    .profile-background{
+        display: block;
+        max-height: 15rem;
+        background-color: hsl(246, 79%, 60%);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .profile-picture{
+        margin-inline: 0;
+    }
+
+    .grid-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-span-col-3{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .hours-spent{
+        display: block;
+    }
+    
+}
+
